@@ -1,0 +1,582 @@
+
+@font-face {
+	font-family: 'Pokemon Solid';
+	src: url(fonts/Pokemon\ Solid.ttf);
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* GENERAL */
+
+body {
+	margin: 0;
+	font-family: 'Segoe Print','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footer {
+	background: rgba(0, 0, 0, 0.9);
+	color: white;
+	padding: 40px 20px 10px;
+	font-size: medium;
+}
+
+.contenue_footer {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.colonne {
+	width: 250px;
+}
+
+.colonne h3 {
+	color: gold;
+	margin-bottom: 10px;
+}
+
+.colonne ul {
+	padding: 0;
+}
+
+.colonne li {
+	list-style: none;
+	margin-bottom: 6px;
+}
+
+.dessous {
+	text-align: center;
+	margin-top: 30px;
+	padding-top: 15px;
+	border-top: 1px solid lightgray;
+	font-size: small;
+	color: lightgray;
+}
+
+
+nav {
+	height: 110px;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.9);
+	display: flex;
+	z-index: 10;
+    margin: 0 auto;
+}
+
+nav img {
+	height: 15px;
+}
+
+#logo{
+	height: 50px;
+}
+
+.menu{
+	display: flex;
+}
+
+nav ul {
+	display: flex;
+    list-style-type: none;
+	width: 100%;
+}
+
+nav ul li #menu {
+	width: 50%;
+}
+
+nav ul li{
+    width: 100%;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+	text-align: center;
+    color: rgba(255, 255, 255, 1);
+    border-bottom: 2px solid transparent;
+    padding: 0px;
+	height: 56.5px;
+}
+
+nav a:hover #logo {
+	color: black;
+}
+
+nav a:hover{
+    color: yellow;
+    border-bottom: 2px solid gold;
+	text-decoration: none;
+}
+nav a:hover.index{
+	color: black;
+	border-bottom: 0px;
+}
+
+.sous{
+	color: white;
+    display: none;
+    box-shadow: 0px 1px 2px #cccccc;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+	right: 20px;
+    width: 39%;
+	border-radius: 20px;
+	padding-right: 40px;
+	padding-bottom: 10px;
+}
+
+#liste-types{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+	right : 140px;
+    width: 100%;
+	border-radius: 20px;
+	padding-right: 50px;
+	padding-bottom: 0px;
+}
+
+nav > ul li:hover .sous{
+    display: block;
+}
+
+nav > ul li:hover #liste-types{
+    display: block;
+	columns: 2 100px
+}
+
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: center;
+	margin-bottom: 5px;
+	padding-top: 10px;
+}
+
+#liste-types li {
+	margin-bottom: 0px;
+}
+
+.sous a{
+    border-bottom: none;
+}
+
+.sous a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+}
+
+.deroulant > a::after{
+    content: "";
+    font-size: 12px;
+}
+
+ul {
+	list-style: none;
+}
+
+ul#liste-types li {
+	display: inline-block;
+	padding-inline: 5px;
+	font-size: x-large;
+}
+
+.image_pokemon {
+	height: 300px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a#menu{
+	padding-bottom: 20px;
+}
+
+a:active{
+	color : lightgray;
+}
+
+#type {
+	height: 30px;
+}
+
+img#evo {
+	height: 150px;
+}
+
+#gif {
+	justify-content: center;
+	height: 40px;
+}
+
+#png {
+	height: 40px;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* RECHERCHE */
+
+a#recherche {
+	color: black;
+}
+
+#id-rechercher {
+	margin: 0 auto;
+}
+
+#titreresultat {
+	font-family: 'Pokemon Solid';
+	color: white;
+	margin-top: 50px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+
+.resultat {
+	color: white;
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.2);
+	border: solid rgb(255, 255, 255) 3px;
+	margin: 0 auto;
+	border-radius: 20px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* BODY */
+
+body {
+	height: 100%;
+	font-size: xx-large;
+	padding-top: 60px;
+}
+
+.body-index{
+	background-image: url("../../img/fond-acceuil.png");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+
+.body-type{
+	background-size: cover ;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* INDEX */
+
+#barre_index {
+	width: 300px;
+	height: 40px;
+}
+
+#bouton_index {
+	height: 40px;
+	width: 40px;
+}
+
+#titre-liste {
+	font-family: 'Pokemon Solid', sans-serif;
+	text-align: center;
+	color: white;
+	font-family: 'Pokemon Solid';
+	font-size: 50px;
+	margin-top: 60px;
+	margin-left: 100px;
+	margin-bottom: 0px;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 40px;
+	width: 30%;
+}
+
+#liste-pokemon li {
+	color: white;
+	transition: 0.3s;
+}
+
+#liste-pokemon li:hover {
+	background-color: #61cdff4f;
+	transform: scale(1.1);
+	
+}
+
+.contenue_main {
+	display: flex;
+	justify-content: space-between;
+}
+
+.titre_pokemon_main {
+	font-size: 50px;
+	font-family: 'Pokemon Solid';
+	color: white;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 0% 10%;
+	border-radius: 30px;
+}
+
+.titre_pokemon_affiche {
+	font-size: 40px;
+}
+
+.image_pokemon_main {
+	backdrop-filter: blur(5px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	right: 20vh;
+	top: 20vh;
+	width: 75vh;
+	height: 75vh;
+	background-color: rgba(0, 0, 0, 0.2);
+	border: solid rgb(255, 255, 255) 3px;
+	box-shadow: 0px 0px 50px black;
+	border-radius: 50px;
+	text-shadow: 2px solid rgb(0, 0, 0);
+	margin-top: 10vh;
+	margin-bottom: 9vh;		
+}
+
+.image_pokemon_main img {
+	height: 50vh;
+	width: 50vh;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* TYPES */
+
+#barre_type {
+	width: 300px;
+	height: 40px;
+}
+
+#bouton_type {
+	height: 40px;
+	width: 40px;
+}
+
+.contenue_type {
+	display: flex;
+	justify-content: space-between;
+}
+
+.image_pokemon {
+	backdrop-filter: blur(5px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	right: 20vh;
+	top: 20vh;
+	width: 75vh;
+	height: 75vh;
+	background-color: rgba(0, 0, 0, 0.2);
+	border: solid rgb(255, 255, 255) 3px;
+	box-shadow: 0px 0px 50px black;
+	border-radius: 50px;
+	text-shadow: 2px solid rgb(0, 0, 0);
+	margin-top: 10vh;
+	margin-bottom: 9vh;	
+}
+.titre_pokemon {
+	font-size: 50px;
+	font-family: 'Pokemon Solid';
+	color: white;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 0 50px;
+	border-radius: 30px;
+}
+
+.image_pokemon img {
+	height: 50vh;
+	width: 50vh;
+}
+
+.body-type h1 {
+	margin: 28%;
+	color: white;
+	background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.801));
+	border: solid rgb(255, 255, 255) 3px;
+	box-shadow: 0px 0px 20px black;
+	border-radius: 50px;
+	width: 720px;
+	height: 85px;
+	margin-top: 10vh;
+	text-shadow: 2px solid rgb(0, 0, 0);
+}
+
+.description-type {
+	color: white;
+	text-align: center;
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.801));
+	border: solid white 2px;
+	box-shadow: 0px 0px 20px black;
+	background-size: 820px;
+	width: 96%;
+	height: 100%;
+	margin-left: 1%;
+	padding: 10px ;
+	border-radius: 25px;
+}
+
+#liste-pokemon li {
+	color: white;
+	text-align: center;
+	border: solid white 2px;
+	box-shadow: 0px 0px 20px black;
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.801));
+	border-radius: 50px;
+	width: 670px;
+	height: 35px;
+	margin-top: 15px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* POKEMON */
+
+#barre_pokemon {
+	width: 300px;
+	height: 40px;
+}
+
+#bouton_pokemon {
+	height: 40px;
+	width: 40px;
+}
+
+#titre-pokemon {
+	margin: 28%;
+	color: white;
+	background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.801));
+	border: solid rgb(255, 255, 255) 3px;
+	box-shadow: 0px 0px 20px black;
+	border-radius: 50px;
+	width: 720px;
+	height: 85px;
+	margin-top: 10vh;
+	text-shadow: 2px solid rgb(0, 0, 0);
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 60px;
+}
+
+#types {
+	text-align: center;
+}
+
+#informations {
+	margin-left: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+
+#description {
+	background-color: rgb(255, 255, 255, 0.2);
+	backdrop-filter: blur(5px); 
+	width: 50%;
+    padding: 20px;
+    border-radius: 15px;                  
+    box-shadow: 0 0 20px black;
+	margin: auto;
+}
+
+#tableau {
+	background-color: rgb(255, 255, 255, 0.2);
+	backdrop-filter: blur(5px); 
+	width: 30%;
+    padding: 20px;
+    border-radius: 15px;                  
+    box-shadow: 0px 0px 20px black;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+#tableau li {
+	width: 100%;
+}
+
+#titre-evolutions {
+	font-size: larger;
+	text-align: center;
+}
+
+#tab-evolutions {
+	background-color: rgb(255, 255, 255, 0.2);
+	backdrop-filter: blur(5px); 
+	width: 50%;
+    padding: 20px;
+    border-radius: 15px;                  
+    box-shadow: 0 0 20px black;
+	margin: 50px auto;
+}
+
+#tab-evolutions li {
+	align-items: end;
+	margin-top: 20px;
+}
+
+#evolutions {
+	display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#evolutions a {
+	color: black;
+}
+
+.actuel, .autre {
+	text-align: center;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+
+.actuel p, .autre p {
+	background-color: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(5px); 
+    padding: 20px;
+    border-radius: 15px; 
+}
+
+.actuel img, .autre img {
+	background-color: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(5px); 
+    padding: 20px;
+    border-radius: 15px; 
+}
+
+.actuel img{
+	height: 200px;
+	
+}
+
+.autre img{
+	height: 100px;
+}
+

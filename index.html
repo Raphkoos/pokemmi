@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="include/css/style.css">
+	<title>PokeMMI</title>
+	<link rel="icon" href="img/logo-pokeball.png">
+</head>
+
+<body class="body-index">
+	<nav>
+		<ul class="menu" id="trier">
+			<li class="déroulant" id="id-logo"><a href="index.html" class="index" id="menu"><img id="logo" src="img/logo-pokemon.png"></a></li>
+			<li class="déroulant" id="id-rechercher"><div class="rechercher">
+					<input type="search" id="barre_index" placeholder="Rechercher ..." autofocus>
+					<button type="submit" id="bouton_index"><img src="img/loupe.png"></button>
+				</div>
+			</li>
+            <li class="déroulant"><a href="#" id="menu">Trier par</a>
+                <ul class="sous">
+					<li id="tri-numéro">Numéro</li>
+					<li id="tri-a-z">De A à Z</li>
+					<li id="tri-type">Type</li>
+				</ul>
+            </li>
+            <li class="déroulant"><a href="#" id="menu">Choisir type</a>
+                <ul class="sous" id="liste-types"></ul>
+            </li>
+        </ul>
+	</nav>
+	<div class="tout-resultat">
+		<h2 id="titreresultat" hidden>RESULTAT :</h2>
+		<div class="resultat"></div>
+	</div>
+	<h1 id="titre-liste">Liste de Pokemon</h1>
+	<div class="contenue_main">
+	<ul id="liste-pokemon"></ul>
+	<div class="image_pokemon_main"><div class="titre_pokemon_main">Quel est ce pokemon ?</div><img src="img/pokemon-mystere.png" height="500px"></div>
+	</div>
+
+	<script src="include/js/data.js" defer></script>
+	<script src="include/js/main.js" defer></script>
+
+	<footer class="footer">
+	<div class="contenue_footer">
+		<div class="colonne">
+			<h3>PokeMMI</h3>
+			<p>
+				PokeMMI est un site de classement de Pokemon.<br>
+				Il permet de rechercher, classer et tier tous les Pokemon de la première génération.
+			</p>
+		</div>
+		<div class="colonne">
+			<h3>Fonctionnalités</h3>
+			<ul>
+				<li>Classement des Pokémon</li>
+				<li>Recherche par nom</li>
+				<li>Tri par numéro, type et ordre alphabétique</li>
+				<li>Fiches Pokémon détaillées</li>
+			</ul>
+		</div>
+		<div class="colonne">
+			<h3>Créateurs</h3>
+			<ul>
+				<li>Raphaël LECROSNIER</li>
+				<li>Nathan ORNAQUE</li>
+				<li>Nataël RAPHOSE</li>
+				<li>Samuel BOURDEAUX</li>
+			</ul>
+		</div>
+		<div class="colonne">
+			<h3>Projet</h3>
+			<ul>
+				<li>Projet SAE 105</li>
+				<li>IUT d'Arles | Aix-Marseille Université (AMU)</li>
+				<li>Année 2025 - 2026</li>
+			</ul>
+		</div>
+		<div class="colonne">
+			<h3>Ressources</h3>
+			<ul>
+				<li><a href="//fr.w3docs.com/snippets/html/comment-ajouter-une-image-dans-la-barre-de-titre.html">Mettre une image en title</a></li>
+				<li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/Reference/Properties/backdrop-filter#:~:text=La%20propri%C3%A9t%C3%A9%20CSS%20backdrop%2Dfilter,la%20transparence%20de%20l'%C3%A9l%C3%A9ment.">Appliquer un effet de flou</a></li>
+				<li><a href="https://www.shecodes.io/athena/38293-examples-of-tolowercase-and-trim-in-javascript#:~:text=toLowerCase()%20is%20used%20to,or%20end%20of%20a%20string.">Mettre en minuscule et enlever les espaces</a></li>
+				<li><a href="https://code-garage.com/blog/ajouter-une-police-d-ecriture-personnalisee-sur-une-page-web">Mettre une police d'écriture</a></li>
+				<li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare">Utiliser localeCompare</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	
+
+	<div class="dessous">
+		PokeMMI © 2026 — SAE 105 IUT -- Projet étudiant
+	</div>
+</footer>
+</body>
+</html>
+
+
